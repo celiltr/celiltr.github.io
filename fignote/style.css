@@ -1,0 +1,70 @@
+:root {
+  --bg: #faf8f5;
+  --surface: #ffffff;
+  --ink: #2b2622;
+  --muted: #6b625a;
+  --border: rgba(43, 38, 34, 0.12);
+  --brand: #6d2879;
+  --brand-soft: #f3e8f5;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1918;
+    --surface: #24211f;
+    --ink: #eee8e2;
+    --muted: #b7aea6;
+    --border: rgba(255, 255, 255, 0.12);
+    --brand: #d29bdb;
+    --brand-soft: #3a2840;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+main { max-width: 760px; margin: 0 auto; padding: 32px 16px 56px; }
+a { color: var(--brand); }
+a:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; border-radius: 4px; }
+header.brand { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
+header.brand img { width: 56px; height: 56px; border-radius: 14px; }
+header.brand .name { font-size: 24px; font-weight: 700; margin: 0; line-height: 1.2; }
+header.brand .tagline { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 32px 0 8px; }
+h3 { font-size: 17px; margin: 22px 0 6px; }
+p, li { color: var(--ink); }
+.muted { color: var(--muted); }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+.card ul { margin: 6px 0 0; padding-left: 20px; }
+nav.lang { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0 20px; font-size: 14px; }
+nav.lang a {
+  text-decoration: none;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--brand-soft);
+}
+.links { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
+.links a {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  text-decoration: none;
+  font-weight: 600;
+}
+hr { border: 0; border-top: 1px solid var(--border); margin: 40px 0; }
+footer { margin-top: 40px; font-size: 14px; color: var(--muted); }
+code { font-size: 0.92em; background: var(--brand-soft); padding: 1px 5px; border-radius: 5px; }
